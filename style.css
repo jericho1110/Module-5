@@ -145,20 +145,9 @@ a {
 }
 
 #movies {
-    margin: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.container {
     width: 100%;
-    height: 50vw;
-    margin: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    height: 44vh;
+    margin: 32px;    
 }
 
 .movies__title {
@@ -166,6 +155,7 @@ a {
     font-weight: 700;
     color: white;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer__row {
@@ -177,7 +167,7 @@ a {
 
 footer {
     width: 100%;
-    height: 22vh;
+    height: 20vh;
     background-color: black;
     color: white;
     display: flex;
