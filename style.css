@@ -203,3 +203,237 @@ footer {
 .footer__link:hover:after {
     opacity: 1;
 }
+
+#movies {
+    height: auto;
+    min-height: 44vh;
+    margin: 32px 0;
+}
+
+.movies__title {
+    text-align: center;
+}
+
+.movies__message {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.movies__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 16px 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.movie__card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.movie__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.movie__poster {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie__info {
+    padding: 10px;
+}
+
+.movie__title {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.movie__year {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+.sort__controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sort__dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sort__toggle {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: border-color 250ms ease;
+}
+
+.sort__toggle:hover {
+    border-color: white;
+}
+
+.sort__menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    list-style: none;
+    min-width: 180px;
+    z-index: 100;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.sort__menu.open {
+    display: block;
+}
+
+.sort__option {
+    padding: 12px 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 200ms ease;
+}
+
+.sort__option:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.sort__option.active {
+    background: rgba(255,255,255,0.15);
+    font-weight: 600;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+    animation: orbFloat 12s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: #9b00ff;
+    top: -100px;
+    left: -100px;
+    animation-duration: 10s;
+}
+
+.orb-2 {
+    width: 350px;
+    height: 350px;
+    background: #cc00ff;
+    top: 30%;
+    right: -80px;
+    animation-duration: 14s;
+    animation-delay: -4s;
+}
+
+.orb-3 {
+    width: 300px;
+    height: 300px;
+    background: #5500cc;
+    bottom: 10%;
+    left: 20%;
+    animation-duration: 16s;
+    animation-delay: -8s;
+}
+
+@keyframes orbFloat {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(30px, -30px) scale(1.05); }
+    100% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+nav, section, footer {
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    background: #0d0020;
+    border-top: none;
+    position: relative;
+    height: auto;
+    padding: 32px 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #9b00ff, #cc44ff, #9b00ff, transparent);
+}
+
+.footer__row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.footer__links {
+    width: auto;
+    justify-content: center;
+    gap: 32px;
+}
+
+.copyright p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(60, 0, 120, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 0;
+}
+
+nav .row {
+    padding: 16px 32px;
+}
